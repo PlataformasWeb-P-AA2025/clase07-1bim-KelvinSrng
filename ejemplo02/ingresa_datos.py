@@ -26,7 +26,7 @@ m1 = Modulo(nombre="Primero")
 m2 = Modulo(nombre="Segundo")
 m3 = Modulo(nombre="Tercero")
 
-# Se crean objetos de tipo Matricula
+# Se crean objetos de tipo Matricula con su respectivas relaciones
 matricula1 = Matricula(periodo="periodo aa2021", modulo=m1, estudiante=estudiante1)
 matricula2 = Matricula(periodo="periodo aa2020", modulo=m2, estudiante=estudiante1)
 matricula3 = Matricula(periodo="periodo aa2019", modulo=m3, estudiante=estudiante1)
@@ -37,6 +37,7 @@ matricula6 = Matricula(periodo="periodo aa2019", modulo=m3, estudiante=estudiant
 
 # se agrega los objetos
 # a la sesión
+# 
 session.add(estudiante1)
 session.add(estudiante2)
 session.add(estudiante3)
