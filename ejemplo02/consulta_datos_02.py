@@ -22,4 +22,23 @@ session = Session()
 matriculas = session.query(Matricula).all()
 
 for m in matriculas:
-    print(m, m.estudiante, m.modulo)
+    print(m, m.estudiante.nombre, m.modulo)
+
+
+# Obtener todos los modulos que tengan matriculas de estudiantes cuyo nombre sea Tony
+#for m in matriculas:
+ #   print(m.modulo, m.estudiante.nombre)
+
+
+
+
+# clubs = session.query(Club).join(Jugador).\
+#       filter(Jugador.nombre.like("%Da%")).all()
+
+
+resultados = session.query(Modulo).join(Matricula).join(Estudiante).\
+    filter(Estudiante.nombre.like('%Tony%')).all()
+
+# Imprimir resultados
+for modulo in resultados:
+    print(modulo)
